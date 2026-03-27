@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="AntoFresh: suscríbete y recibe cada semana una caja de frutas, verduras y huevos frescos y de temporada en tu casa."
+    />
+    <title>AntoFresh | Suscripción semanal de productos frescos</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                green: '#2E7D32',
+                greenDark: '#1f5c22',
+                greenSoft: '#eaf7eb',
+                orange: '#f59e0b',
+                cream: '#fffdf8',
+                text: '#1f2937',
+                muted: '#6b7280'
+              }
+            },
+            fontFamily: {
+              heading: ['Plus Jakarta Sans', 'sans-serif'],
+              body: ['Inter', 'sans-serif']
+            },
+            boxShadow: {
+              soft: '0 18px 45px rgba(31, 41, 55, 0.08)'
+            }
+          }
+        }
+      };
+    </script>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-white text-brand-text font-body antialiased">
+    <header class="sticky top-0 z-50 border-b border-gray-100 bg-white/95 backdrop-blur">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+        <a href="#inicio" class="flex items-center gap-3">
+          <img src="assets/antofresh-logo.png" alt="Logotipo de AntoFresh" class="h-12 w-auto rounded-xl" />
+          <span class="font-heading text-xl font-extrabold text-brand-green">AntoFresh</span>
+        </a>
+
+        <nav class="hidden items-center gap-8 md:flex">
+          <a href="#como-funciona" class="font-medium text-gray-700 transition hover:text-brand-green">Cómo funciona</a>
+          <a href="#beneficios" class="font-medium text-gray-700 transition hover:text-brand-green">Beneficios</a>
+          <a href="#contacto" class="font-medium text-gray-700 transition hover:text-brand-green">Contacto</a>
+          <a
+            href="#contacto"
+            class="rounded-full bg-brand-orange px-5 py-3 font-semibold text-white transition hover:scale-[0.98] hover:bg-amber-500"
+            >Suscribirme</a
+          >
+        </nav>
+
+        <button
+          id="menuButton"
+          type="button"
+          class="inline-flex items-center justify-center rounded-xl border border-gray-200 p-3 text-brand-green md:hidden"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <div id="mobileMenu" class="hidden border-t border-gray-100 bg-white md:hidden">
+        <nav class="mx-auto flex max-w-7xl flex-col px-4 py-4 sm:px-6">
+          <a href="#como-funciona" class="rounded-xl px-3 py-3 font-medium text-gray-700 hover:bg-brand-greenSoft">Cómo funciona</a>
+          <a href="#beneficios" class="rounded-xl px-3 py-3 font-medium text-gray-700 hover:bg-brand-greenSoft">Beneficios</a>
+          <a href="#contacto" class="rounded-xl px-3 py-3 font-medium text-gray-700 hover:bg-brand-greenSoft">Contacto</a>
+          <a href="#contacto" class="mt-3 rounded-xl bg-brand-orange px-4 py-3 text-center font-semibold text-white">Suscribirme</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="inicio" class="overflow-hidden bg-white">
+        <div class="mx-auto grid max-w-7xl items-center gap-12 px-4 py-14 sm:px-6 md:py-20 lg:grid-cols-2 lg:px-8 lg:py-24">
+          <div>
+            <div class="mb-6 inline-flex items-center gap-2 rounded-full bg-brand-greenSoft px-4 py-2 text-sm font-semibold text-brand-green">
+              <span class="inline-block h-2.5 w-2.5 rounded-full bg-brand-orange"></span>
+              Productos frescos cada semana
+            </div>
+            <h1 class="font-heading text-4xl font-extrabold leading-tight text-brand-green sm:text-5xl lg:text-6xl">
+              Frutas, verduras y huevos frescos <span class="text-brand-orange">directamente a tu puerta</span>
+            </h1>
+            <p class="mt-6 max-w-xl text-lg leading-8 text-brand-muted">
+              Suscríbete a AntoFresh y recibe cada semana una caja con productos de temporada, seleccionados con mimo para que comas mejor, sin complicarte.
+            </p>
+
+            <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+              <a
+                href="#contacto"
+                class="inline-flex items-center justify-center rounded-full bg-brand-green px-7 py-4 text-base font-bold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-brand-greenDark"
+              >
+                Quiero mi caja semanal
+              </a>
+              <a
+                href="#como-funciona"
+                class="inline-flex items-center justify-center rounded-full border border-gray-200 px-7 py-4 text-base font-bold text-brand-text transition hover:border-brand-green hover:text-brand-green"
+              >
+                Ver cómo funciona
+              </a>
+            </div>
+
+            <div class="mt-10 grid max-w-md grid-cols-3 gap-4 rounded-3xl border border-gray-100 bg-brand-cream p-5 shadow-soft">
+              <div>
+                <p class="font-heading text-2xl font-extrabold text-brand-green">100%</p>
+                <p class="mt-1 text-sm text-brand-muted">fresco y de temporada</p>
+              </div>
+              <div>
+                <p class="font-heading text-2xl font-extrabold text-brand-green">1 caja</p>
+                <p class="mt-1 text-sm text-brand-muted">cada semana en casa</p>
+              </div>
+              <div>
+                <p class="font-heading text-2xl font-extrabold text-brand-green">0 estrés</p>
+                <p class="mt-1 text-sm text-brand-muted">nosotros lo preparamos</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div class="absolute -left-6 top-8 hidden h-24 w-24 rounded-full bg-brand-greenSoft lg:block"></div>
+            <div class="absolute -right-6 bottom-10 hidden h-28 w-28 rounded-full bg-amber-100 lg:block"></div>
+            <div class="relative rounded-[2rem] border border-gray-100 bg-white p-4 shadow-soft">
+              <img
+                src="assets/antofresh-logo.png"
+                alt="Logotipo ilustrado de AntoFresh"
+                class="mx-auto w-full max-w-xl rounded-[1.5rem] bg-white object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="como-funciona" class="bg-brand-greenSoft/60 py-20">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="mx-auto max-w-2xl text-center">
+            <p class="font-semibold uppercase tracking-[0.22em] text-brand-orange">Cómo funciona</p>
+            <h2 class="mt-4 font-heading text-3xl font-extrabold text-brand-green sm:text-4xl">Una suscripción sencilla para comer mejor</h2>
+            <p class="mt-5 text-lg leading-8 text-brand-muted">
+              Todo está pensado para que disfrutes de productos frescos sin tener que preocuparte por hacer la compra cada semana.
+            </p>
+          </div>
+
+          <div class="mt-14 grid gap-6 md:grid-cols-3">
+            <article class="rounded-3xl bg-white p-8 shadow-soft">
+              <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-green text-xl font-extrabold text-white">1</div>
+              <h3 class="font-heading text-2xl font-bold text-brand-text">Te suscribes al plan mensual</h3>
+              <p class="mt-4 leading-7 text-brand-muted">
+                Te apuntas una vez y activas tu suscripción mensual para olvidarte de gestiones complicadas.
+              </p>
+            </article>
+
+            <article class="rounded-3xl bg-white p-8 shadow-soft">
+              <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-orange text-xl font-extrabold text-white">2</div>
+              <h3 class="font-heading text-2xl font-bold text-brand-text">Preparamos tu caja semanal</h3>
+              <p class="mt-4 leading-7 text-brand-muted">
+                Cada semana seleccionamos frutas, verduras y huevos frescos y de temporada con una calidad que se nota.
+              </p>
+            </article>
+
+            <article class="rounded-3xl bg-white p-8 shadow-soft">
+              <div class="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-green text-xl font-extrabold text-white">3</div>
+              <h3 class="font-heading text-2xl font-bold text-brand-text">Recibes todo en casa</h3>
+              <p class="mt-4 leading-7 text-brand-muted">
+                Lo llevamos a tu puerta para que disfrutes de comida fresca, cómoda y lista para tu semana.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="beneficios" class="py-20">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="grid items-start gap-12 lg:grid-cols-[1fr_1.15fr]">
+            <div>
+              <p class="font-semibold uppercase tracking-[0.22em] text-brand-orange">Por qué AntoFresh</p>
+              <h2 class="mt-4 font-heading text-3xl font-extrabold text-brand-green sm:text-4xl">Fresco, cómodo y con un toque local</h2>
+              <p class="mt-5 text-lg leading-8 text-brand-muted">
+                Queremos que la experiencia sea simple y apetecible: productos buenos, entregas semanales y la tranquilidad de saber que comes mejor sin perder tiempo.
+              </p>
+              <div class="mt-8 rounded-3xl bg-brand-green p-8 text-white shadow-soft">
+                <p class="font-heading text-2xl font-extrabold">La caja perfecta para cada semana</p>
+                <p class="mt-3 leading-7 text-white/85">
+                  Ideal para familias, pisos compartidos o cualquier persona que quiera tener siempre fruta, verdura y huevos listos en casa.
+                </p>
+              </div>
+            </div>
+
+            <div class="grid gap-5 sm:grid-cols-2">
+              <article class="rounded-3xl border border-gray-100 bg-white p-6 shadow-soft">
+                <h3 class="font-heading text-xl font-bold text-brand-text">Productos de temporada</h3>
+                <p class="mt-3 leading-7 text-brand-muted">Más sabor, mejor textura y una selección que cambia con la temporada.</p>
+              </article>
+              <article class="rounded-3xl border border-gray-100 bg-white p-6 shadow-soft">
+                <h3 class="font-heading text-xl font-bold text-brand-text">Huevos frescos</h3>
+                <p class="mt-3 leading-7 text-brand-muted">Incluidos en tu caja semanal para completar una compra esencial y práctica.</p>
+              </article>
+              <article class="rounded-3xl border border-gray-100 bg-white p-6 shadow-soft">
+                <h3 class="font-heading text-xl font-bold text-brand-text">Entrega cómoda</h3>
+                <p class="mt-3 leading-7 text-brand-muted">Recíbelo todo en casa sin cargar bolsas ni recorrer tiendas.</p>
+              </article>
+              <article class="rounded-3xl border border-gray-100 bg-white p-6 shadow-soft">
+                <h3 class="font-heading text-xl font-bold text-brand-text">Cercanía y confianza</h3>
+                <p class="mt-3 leading-7 text-brand-muted">Una marca simpática, cercana y perfecta para sorprender a tus compañeros.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white py-6">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="grid gap-6 md:grid-cols-3">
+            <div class="rounded-[2rem] bg-gradient-to-br from-green-50 to-white p-8 shadow-soft">
+              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-orange">Caja semanal</p>
+              <h3 class="mt-4 font-heading text-2xl font-extrabold text-brand-green">Siempre algo rico en casa</h3>
+              <p class="mt-4 leading-7 text-brand-muted">
+                Fruta para desayunos, verdura para tus recetas y huevos frescos para resolver cualquier comida.
+              </p>
+            </div>
+            <div class="rounded-[2rem] bg-gradient-to-br from-amber-50 to-white p-8 shadow-soft">
+              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-orange">Suscripción mensual</p>
+              <h3 class="mt-4 font-heading text-2xl font-extrabold text-brand-green">Te apuntas una vez y listo</h3>
+              <p class="mt-4 leading-7 text-brand-muted">
+                Una propuesta clara, directa y perfecta para una landing divertida y creíble.
+              </p>
+            </div>
+            <div class="rounded-[2rem] bg-gradient-to-br from-lime-50 to-white p-8 shadow-soft">
+              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-orange">Contacto rápido</p>
+              <h3 class="mt-4 font-heading text-2xl font-extrabold text-brand-green">Resolvemos dudas al momento</h3>
+              <p class="mt-4 leading-7 text-brand-muted">
+                Puedes llamar o escribir para pedir información, cambiar tu caja o apuntarte.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="py-20">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div class="grid gap-10 rounded-[2rem] bg-brand-green p-8 text-white shadow-soft lg:grid-cols-[1.1fr_0.9fr] lg:p-12">
+            <div>
+              <p class="font-semibold uppercase tracking-[0.22em] text-amber-200">Contacto</p>
+              <h2 class="mt-4 font-heading text-3xl font-extrabold sm:text-4xl">¿Te apuntas a AntoFresh?</h2>
+              <p class="mt-5 max-w-2xl text-lg leading-8 text-white/85">
+                Llámanos o escríbenos y te contamos cómo empezar tu suscripción mensual para recibir cada semana tu caja de frutas, verduras y huevos frescos.
+              </p>
+
+              <div class="mt-8 space-y-4">
+                <a href="tel:+34900123456" class="flex items-center gap-4 rounded-2xl bg-white/10 px-5 py-4 transition hover:bg-white/15">
+                  <div class="flex h-12 w-12 items-center justify-center rounded-full bg-white/15 text-xl">📞</div>
+                  <div>
+                    <p class="text-sm text-white/70">Teléfono</p>
+                    <p class="font-heading text-xl font-extrabold">900 123 456</p>
+                  </div>
+                </a>
+                <a href="mailto:hola@antofresh.es" class="flex items-center gap-4 rounded-2xl bg-white/10 px-5 py-4 transition hover:bg-white/15">
+                  <div class="flex h-12 w-12 items-center justify-center rounded-full bg-white/15 text-xl">✉️</div>
+                  <div>
+                    <p class="text-sm text-white/70">Correo</p>
+                    <p class="font-heading text-xl font-extrabold">hola@antofresh.es</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="rounded-[1.75rem] bg-white p-6 text-brand-text lg:p-8">
+              <h3 class="font-heading text-2xl font-extrabold text-brand-green">Solicita información</h3>
+              <p class="mt-3 leading-7 text-brand-muted">Déjanos tus datos y te contactaremos para explicarte la suscripción.</p>
+
+              <form id="contactForm" class="mt-6 space-y-4">
+                <div>
+                  <label for="name" class="mb-2 block text-sm font-semibold text-brand-text">Nombre</label>
+                  <input id="name" name="name" type="text" required class="w-full rounded-2xl border border-gray-200 px-4 py-3 outline-none transition focus:border-brand-green focus:ring-2 focus:ring-green-100" placeholder="Tu nombre" />
+                </div>
+                <div>
+                  <label for="phone" class="mb-2 block text-sm font-semibold text-brand-text">Teléfono</label>
+                  <input id="phone" name="phone" type="tel" required class="w-full rounded-2xl border border-gray-200 px-4 py-3 outline-none transition focus:border-brand-green focus:ring-2 focus:ring-green-100" placeholder="Tu teléfono" />
+                </div>
+                <div>
+                  <label for="message" class="mb-2 block text-sm font-semibold text-brand-text">Mensaje</label>
+                  <textarea id="message" name="message" rows="4" class="w-full rounded-2xl border border-gray-200 px-4 py-3 outline-none transition focus:border-brand-green focus:ring-2 focus:ring-green-100" placeholder="Quiero saber más sobre la suscripción semanal"></textarea>
+                </div>
+                <button type="submit" class="w-full rounded-full bg-brand-orange px-6 py-4 font-bold text-white transition hover:bg-amber-500">
+                  Enviar solicitud
+                </button>
+                <p id="formMessage" class="hidden rounded-2xl bg-brand-greenSoft px-4 py-3 text-sm font-medium text-brand-green"></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-gray-100 bg-white">
+      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 py-8 text-center sm:px-6 lg:flex-row lg:px-8 lg:text-left">
+        <div class="flex items-center gap-3">
+          <img src="assets/antofresh-logo.png" alt="Logo AntoFresh" class="h-12 w-auto rounded-xl" />
+          <div>
+            <p class="font-heading text-lg font-extrabold text-brand-green">AntoFresh</p>
+            <p class="text-sm text-brand-muted">La caja semanal más fresca de la oficina.</p>
+          </div>
+        </div>
+        <div class="text-sm text-brand-muted">© 2025 AntoFresh. Web lista para subir a GitHub Pages.</div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

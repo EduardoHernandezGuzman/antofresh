@@ -1,0 +1,20 @@
+html, body {
+  background: #ffffff;
+}
+
+body {
+  min-height: 100vh;
+}
+
+::selection {
+  background: #ccefd0;
+  color: #1f5c22;
+}
+
+input, textarea, button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  image-rendering: auto;
+}
